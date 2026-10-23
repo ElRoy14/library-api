@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Application.Common.Exceptions
 {
-    public class NotFoundException
-    {
-    }
+    public class NotFoundException(string resource, int id)
+        : Exception($"{resource} with id {id} was not found.");
 }
